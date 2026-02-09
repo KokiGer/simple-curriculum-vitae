@@ -19,7 +19,8 @@
                     <span class="material-symbols-outlined text-[20px]">print</span>
                 </button>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+                <button id="lang-toggle" class="w-10 h-10 flex items-center justify-center text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-full transition-colors text-xs font-bold" onclick="toggleLang()">EN</button>
                 <button class="w-10 h-10 flex items-center justify-center text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
                     <span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
                     <span class="material-symbols-outlined text-[20px] hidden dark:block text-yellow-500">light_mode</span>
@@ -43,7 +44,7 @@
                     </div>
                     <div>
                         <h1 class="text-xl font-bold text-forest-dark dark:text-white">Julian Engler</h1>
-                        <p class="text-forest-mid dark:text-primary font-medium text-sm">Tech Lead / Teamlead Softwareentwicklung</p>
+                        <p class="text-forest-mid dark:text-primary font-medium text-sm" data-en="Tech Lead / Team Lead Software Engineering">Tech Lead / Teamlead Softwareentwicklung</p>
                     </div>
                 </div>
 
@@ -59,18 +60,18 @@
                     </div>
                     <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
                         <span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
-                        <span class="text-xs">Berlin, Deutschland</span>
+                        <span class="text-xs" data-en="Berlin, Germany">Berlin, Deutschland</span>
                     </div>
                 </div>
 
                 <!-- Technical Skills -->
                 <div class="flex flex-col gap-4">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Technische Skills</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Technical Skills">Technische Skills</h3>
 
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-forest-mid text-[18px]">code</span>
-                            <p class="text-xs font-bold dark:text-gray-300">Sprachen</p>
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Languages">Sprachen</p>
                         </div>
                         <div class="flex flex-wrap gap-2 pl-6">
                             <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">PHP</span>
@@ -87,7 +88,7 @@
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-forest-mid text-[18px]">database</span>
-                            <p class="text-xs font-bold dark:text-gray-300">Datenbanken</p>
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Databases">Datenbanken</p>
                         </div>
                         <div class="flex flex-wrap gap-2 pl-6">
                             <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">MySQL</span>
@@ -100,7 +101,7 @@
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-forest-mid text-[18px]">terminal</span>
-                            <p class="text-xs font-bold dark:text-gray-300">Tools & Methoden</p>
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Tools & Methods">Tools & Methoden</p>
                         </div>
                         <div class="flex flex-wrap gap-2 pl-6">
                             <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">TDD</span>
@@ -116,27 +117,27 @@
 
                 <!-- Schwerpunkte -->
                 <div class="flex flex-col gap-4">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Schwerpunkte</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Key Areas">Schwerpunkte</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">E-Commerce</span>
-                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">ERP-Systeme</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium" data-en="ERP Systems">ERP-Systeme</span>
                         <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">API-Design</span>
-                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Skalierung</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium" data-en="Scaling">Skalierung</span>
                         <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Team-Coaching</span>
                     </div>
                 </div>
 
                 <!-- Languages -->
                 <div class="flex flex-col gap-4">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Sprachen</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Languages">Sprachen</h3>
                     <div class="flex flex-col gap-2">
                         <div class="flex justify-between">
-                            <span class="text-xs dark:text-gray-300">Deutsch</span>
-                            <span class="text-[11px] text-forest-mid font-medium">Muttersprache</span>
+                            <span class="text-xs dark:text-gray-300" data-en="German">Deutsch</span>
+                            <span class="text-[11px] text-forest-mid font-medium" data-en="Native">Muttersprache</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-xs dark:text-gray-300">Englisch</span>
-                            <span class="text-[11px] text-forest-mid font-medium">Fließend</span>
+                            <span class="text-xs dark:text-gray-300" data-en="English">Englisch</span>
+                            <span class="text-[11px] text-forest-mid font-medium" data-en="Fluent">Fließend</span>
                         </div>
                     </div>
                 </div>
@@ -149,14 +150,14 @@
                 <!-- Header -->
                 <div class="flex flex-col gap-4">
                     <div class="flex flex-col gap-2">
-                        <p class="text-3xl font-black tracking-tight text-forest-dark dark:text-white">Lebenslauf</p>
+                        <p class="text-3xl font-black tracking-tight text-forest-dark dark:text-white" data-en="Curriculum Vitae">Lebenslauf</p>
                         <div class="h-1 w-16 bg-primary dark:bg-primary rounded-full"></div>
                     </div>
-                    <p class="text-sm leading-relaxed text-cool-gray-text dark:text-gray-400 max-w-[580px]">
+                    <p class="text-sm leading-relaxed text-cool-gray-text dark:text-gray-400 max-w-[580px]" data-en="Since 2008 I have been developing software with a focus on PHP – from e-commerce full-stack to backend services and ERP development. Since 2023 I work at a comparison portal (flights, checkout) on scalable, stable systems. As an Engineering Team Lead my focus is on technical architecture and project management: I structure requirements, design solutions, make risks visible early and steer implementation so that teams deliver reliably. Clear communication, traceable decisions and sustainable quality are important to me.">
                         Seit 2008 entwickle ich Software mit Schwerpunkt PHP – vom E-Commerce-Full-Stack über
                         Backend-Services bis zur ERP-Entwicklung. Seit 2023 arbeite ich bei einem Vergleichsportal
                         (Flug, Checkout) an skalierbaren, stabilen Systemen. Als Engineering Team Lead liegt mein
-                        Fokus auf technischer Architektur und Projektsteuerung: Ich strukturiere Anforderungen,
+                        Fokus auf technischer Architektur und Projektsteuerung. Ich strukturiere Anforderungen,
                         entwerfe Lösungen, mache Risiken frühzeitig sichtbar und steuere die Umsetzung so, dass Teams
                         verlässlich liefern. Wichtig sind mir klare Kommunikation, nachvollziehbare Entscheidungen und
                         nachhaltige Qualität.
@@ -167,7 +168,7 @@
                 <div class="flex flex-col gap-6">
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-forest-mid">work</span>
-                        <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight">Berufserfahrung</h2>
+                        <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight" data-en="Professional Experience">Berufserfahrung</h2>
                     </div>
 
                     <div class="flex flex-col gap-8">
@@ -185,13 +186,13 @@
                                     <div class="absolute -left-[5px] top-2 w-2 h-2 bg-forest-dark rounded-full"></div>
                                     <div class="flex flex-col gap-2">
                                         <div class="flex justify-between items-center">
-                                            <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Teamlead Softwareentwicklung</h4>
+                                            <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight" data-en="Team Lead Software Engineering">Teamlead Softwareentwicklung</h4>
                                             <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">04/2025 - 04/2026</span>
                                         </div>
                                         <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                            <li>Fachliche und disziplinarische Führung eines Entwicklungsteams (Personalverantwortung, Coaching, Teamorganisation)</li>
-                                            <li>Planung und Konzeption zentraler Initiativen rund um Checkout- und Bestellprozesse Betreuung der Umsetzung (Priorisierung, technische Entscheidungen, Abstimmung mit Stakeholdern, Qualitätssicherung)</li>
-                                            <li>Projekte: B2B-Schnittstelle für den Kassenprozess, Anbindung eines neuen VCC-Systems, Modernisierung des PHP-Stacks</li>
+                                            <li data-en="Technical and disciplinary leadership of a development team (personnel responsibility, coaching, team organization)">Fachliche und disziplinarische Führung eines Entwicklungsteams (Personalverantwortung, Coaching, Teamorganisation)</li>
+                                            <li data-en="Planning and conceptualization of key initiatives around checkout and ordering processes, overseeing implementation (prioritization, technical decisions, stakeholder alignment, quality assurance)">Planung und Konzeption zentraler Initiativen rund um Checkout- und Bestellprozesse Betreuung der Umsetzung (Priorisierung, technische Entscheidungen, Abstimmung mit Stakeholdern, Qualitätssicherung)</li>
+                                            <li data-en="Projects: B2B interface for checkout process, integration of new VCC system, modernization of PHP stack">Projekte: B2B-Schnittstelle für den Kassenprozess, Anbindung eines neuen VCC-Systems, Modernisierung des PHP-Stacks</li>
                                         </ul>
                                         <div class="flex flex-wrap gap-2 mt-1">
                                             <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
@@ -209,13 +210,13 @@
                                     <div class="absolute -left-[5px] top-2 w-2 h-2 bg-cool-gray-text rounded-full opacity-30"></div>
                                     <div class="flex flex-col gap-2">
                                         <div class="flex justify-between items-center">
-                                            <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Stellv. Teamlead Softwareentwicklung</h4>
+                                            <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight" data-en="Deputy Team Lead Software Engineering">Stellv. Teamlead Softwareentwicklung</h4>
                                             <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">04/2024 - 03/2025</span>
                                         </div>
                                         <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                            <li>Unterstützung der Teamleitung in Projektsteuerung und Personalthemen</li>
-                                            <li>Stabilisierung und Skalierung zentraler Anwendungsteile mit Fokus auf robuste Abläufe und Qualität</li>
-                                            <li>Projekte: Einlösen eines Punktesystems, Stabilisierung & Skalierung, Anbindung eines neuen Flug-Quellsystems (Pricing & Bestellung)</li>
+                                            <li data-en="Supporting team leadership in project management and personnel matters">Unterstützung der Teamleitung in Projektsteuerung und Personalthemen</li>
+                                            <li data-en="Stabilization and scaling of core application components with focus on robust processes and quality">Stabilisierung und Skalierung zentraler Anwendungsteile mit Fokus auf robuste Abläufe und Qualität</li>
+                                            <li data-en="Projects: Points system redemption, stabilization &amp; scaling, integration of new flight source system (pricing &amp; booking)">Projekte: Einlösen eines Punktesystems, Stabilisierung & Skalierung, Anbindung eines neuen Flug-Quellsystems (Pricing & Bestellung)</li>
                                         </ul>
                                         <div class="flex flex-wrap gap-2 mt-1">
                                             <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
@@ -237,8 +238,8 @@
                                             <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">11/2022 - 03/2024</span>
                                         </div>
                                         <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                            <li>Portierung/Auskopplung der Suche aus der PHP-Anwendung als eigenständiger Go-Service zur besseren Skalierbarkeit</li>
-                                            <li>Umsetzung eines asynchronen Checkouts zur robusteren Verarbeitung der Bestellstrecke</li>
+                                            <li data-en="Porting/extraction of search from PHP application as standalone Go service for better scalability">Portierung/Auskopplung der Suche aus der PHP-Anwendung als eigenständiger Go-Service zur besseren Skalierbarkeit</li>
+                                            <li data-en="Implementation of asynchronous checkout for more robust order processing">Umsetzung eines asynchronen Checkouts zur robusteren Verarbeitung der Bestellstrecke</li>
                                         </ul>
                                         <div class="flex flex-wrap gap-2 mt-1">
                                             <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Go</span>
@@ -269,40 +270,40 @@
 
                 <!-- Education -->
                 <div class="flex flex-col gap-4">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Ausbildung</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Education">Ausbildung</h3>
                     <div class="flex flex-col gap-4">
                         <div class="flex flex-col gap-1">
-                            <p class="text-xs font-bold dark:text-gray-300">
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Apprenticeship - IT Specialist Application Development">
                                 Ausbildung - Fachinformatiker Anwendungsentwicklung
                             </p>
                             <p class="text-[11px] text-cool-gray-text dark:text-gray-400">notebooksbilliger.de AG</p>
                             <p class="text-[10px] text-forest-mid font-medium italic">08/2008 - 01/2011</p>
-                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400">Abschlussnote: 79 Punkte</p>
+                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400" data-en="Final Grade: 79 Points">Abschlussnote: 79 Punkte</p>
                         </div>
                         <div class="flex flex-col gap-1">
-                            <p class="text-xs font-bold dark:text-gray-300">Studium Wirtschaftsinformatik (B.Sc., ohne Abschluss)</p>
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Business Informatics Studies (B.Sc., without degree)">Studium Wirtschaftsinformatik (B.Sc., ohne Abschluss)</p>
                             <p class="text-[11px] text-cool-gray-text dark:text-gray-400">Hochschule Mittweida</p>
                             <p class="text-[10px] text-forest-mid font-medium italic">09/2006 - 07/2008</p>
-                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400">3 Semester, Fakultät: Mathematik / Naturwissenschaften / Informatik</p>
+                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400" data-en="3 Semesters, Faculty: Mathematics / Natural Sciences / Computer Science">3 Semester, Fakultät: Mathematik / Naturwissenschaften / Informatik</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Qualifications -->
                 <div class="flex flex-col gap-4">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Qualifikationen</h3>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Qualifications">Qualifikationen</h3>
                     <div class="flex flex-col gap-3">
                         <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
                             <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
                             <div>
-                                <p class="text-[11px] font-bold dark:text-gray-200 leading-tight">Ausbilder gem. Ausbilder-Eignungsverordnung</p>
+                                <p class="text-[11px] font-bold dark:text-gray-200 leading-tight" data-en="Certified Trainer acc. to Trainer Aptitude Regulation (AEVO)">Ausbilder gem. Ausbilder-Eignungsverordnung</p>
                                 <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">IHK Berlin</p>
                             </div>
                         </div>
                         <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
                             <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
                             <div>
-                                <p class="text-[11px] font-bold dark:text-gray-200">Führerschein Klasse B</p>
+                                <p class="text-[11px] font-bold dark:text-gray-200" data-en="Driver's License Class B">Führerschein Klasse B</p>
                                 <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">EU-Standard</p>
                             </div>
                         </div>
@@ -336,7 +337,7 @@
                     </div>
                     <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
                         <span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
-                        <span class="text-xs">Berlin, Deutschland</span>
+                        <span class="text-xs" data-en="Berlin, Germany">Berlin, Deutschland</span>
                     </div>
                 </div>
             </div>
@@ -348,7 +349,7 @@
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-forest-mid">work</span>
-                        <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight">Berufserfahrung (Fortsetzung)</h2>
+                        <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight" data-en="Professional Experience (continued)">Berufserfahrung (Fortsetzung)</h2>
                     </div>
                 </div>
 
@@ -378,9 +379,9 @@
                                         <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Senior Backend Developer</h4>
                                     </div>
                                     <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                        <li>Weiterentwicklung eines bestehenden Finanzdienstleistungs-Systems</li>
-                                        <li>Sicherstellung der Programmqualität durch Unit-Tests und Code-Reviews</li>
-                                        <li>Erstellung von Entwickler- und Anwenderdokumentationen</li>
+                                        <li data-en="Further development of an existing financial services system">Weiterentwicklung eines bestehenden Finanzdienstleistungs-Systems</li>
+                                        <li data-en="Ensuring software quality through unit tests and code reviews">Sicherstellung der Programmqualität durch Unit-Tests und Code-Reviews</li>
+                                        <li data-en="Creation of developer and user documentation">Erstellung von Entwickler- und Anwenderdokumentationen</li>
                                     </ul>
                                     <div class="flex flex-wrap gap-2 mt-1">
 
@@ -413,9 +414,9 @@
                                         <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-400 uppercase whitespace-nowrap">01/2017 - 02/2022</span>
                                     </div>
                                     <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                        <li>Leitung eines Backend-Teams (3 Entwickler)</li>
-                                        <li>Planung, Konzeption und Sicherung der Code-Qualität im Team</li>
-                                        <li>Begleitung neuer Shop-Systeme von Akquise über Entwicklung bis Go-Live</li>
+                                        <li data-en="Leading a backend team (3 developers)">Leitung eines Backend-Teams (3 Entwickler)</li>
+                                        <li data-en="Planning, conceptualization and ensuring code quality within the team">Planung, Konzeption und Sicherung der Code-Qualität im Team</li>
+                                        <li data-en="Accompanying new shop systems from acquisition through development to go-live">Begleitung neuer Shop-Systeme von Akquise über Entwicklung bis Go-Live</li>
                                     </ul>
                                     <div class="flex flex-wrap gap-2 mt-1">
                                         <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
@@ -437,9 +438,9 @@
                                         <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">06/2016 - 01/2017</span>
                                     </div>
                                     <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                        <li>Konzeption, Entwicklung und Wartung von Shopware-Plugins</li>
-                                        <li>Einbindung von Fremdsystemen via APIs</li>
-                                        <li>Bereitstellung und Dokumentation von APIs für Fremdsysteme</li>
+                                        <li data-en="Conceptualization, development and maintenance of Shopware plugins">Konzeption, Entwicklung und Wartung von Shopware-Plugins</li>
+                                        <li data-en="Integration of external systems via APIs">Einbindung von Fremdsystemen via APIs</li>
+                                        <li data-en="Provision and documentation of APIs for external systems">Bereitstellung und Dokumentation von APIs für Fremdsysteme</li>
                                     </ul>
                                     <div class="flex flex-wrap gap-2 mt-1">
                                         <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
@@ -469,9 +470,9 @@
                                         <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Software Developer</h4>
                                     </div>
                                     <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                        <li>Weiterentwicklung des exitB ERP-Systems inkl. API- und Plugin-Entwicklung für die Shop-ERP-Integration</li>
-                                        <li>Konzeptionierung und Umsetzung von Webanwendungen: PWA Pick-App und POS-System mit internen Bezahlmethoden</li>
-                                        <li>Implementierung einer Vorkassen-Auszifferung mit Gegenkonto-Prüfung</li>
+                                        <li data-en="Further development of the exitB ERP system incl. API and plugin development for shop-ERP integration">Weiterentwicklung des exitB ERP-Systems inkl. API- und Plugin-Entwicklung für die Shop-ERP-Integration</li>
+                                        <li data-en="Conceptualization and implementation of web applications: PWA Pick-App and POS system with internal payment methods">Konzeptionierung und Umsetzung von Webanwendungen: PWA Pick-App und POS-System mit internen Bezahlmethoden</li>
+                                        <li data-en="Implementation of prepayment clearing with counter-account verification">Implementierung einer Vorkassen-Auszifferung mit Gegenkonto-Prüfung</li>
                                     </ul>
                                     <div class="flex flex-wrap gap-2 mt-1">
 
@@ -501,9 +502,9 @@
                                         <h4 class="text-base font-Bold text-forest-dark dark:text-white leading-tight">Web Developer</h4>
                                     </div>
                                     <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                        <li>Weiterentwicklung und Betreuung des Shop-Systems (Frontend & Backend)</li>
-                                        <li>Planung und Umsetzung von Projekten zur Kundenfindung/-bindung</li>
-                                        <li>Optimierung bestehender Prozesse und Refactoring bestehender Code-Architekturen</li>
+                                        <li data-en="Further development and maintenance of the shop system (frontend &amp; backend)">Weiterentwicklung und Betreuung des Shop-Systems (Frontend & Backend)</li>
+                                        <li data-en="Planning and implementation of customer acquisition/retention projects">Planung und Umsetzung von Projekten zur Kundenfindung/-bindung</li>
+                                        <li data-en="Optimization of existing processes and refactoring of existing code architectures">Optimierung bestehender Prozesse und Refactoring bestehender Code-Architekturen</li>
                                     </ul>
                                     <div class="flex flex-wrap gap-2 mt-1">
 
@@ -527,8 +528,23 @@
 
     <!-- Footer -->
     <div class="no-print w-full py-8 flex flex-col items-center gap-3 text-cool-gray-text dark:text-gray-500 text-xs">
-        <p>© 2025 Julian Engler — A4 Format für Druck optimiert</p>
+        <p data-en="© 2025 Julian Engler — A4 format optimized for print">© 2025 Julian Engler — A4 Format für Druck optimiert</p>
     </div>
 
+<script>
+function toggleLang() {
+    var html = document.documentElement;
+    var isDE = html.getAttribute('lang') === 'de';
+    var newLang = isDE ? 'en' : 'de';
+    html.setAttribute('lang', newLang);
+    document.getElementById('lang-toggle').textContent = isDE ? 'DE' : 'EN';
+    document.querySelectorAll('[data-en]').forEach(function(el) {
+        if (!el.getAttribute('data-de')) {
+            el.setAttribute('data-de', el.textContent);
+        }
+        el.textContent = el.getAttribute('data-' + newLang);
+    });
+}
+</script>
 </body>
 </html>
