@@ -1,0 +1,125 @@
+@media print {
+    .no-print { display: none !important; }
+
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    .a4-container {
+        box-shadow: none !important;
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        width: 210mm !important;
+        min-height: 297mm !important;
+        max-width: none !important;
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
+
+    .page-break {
+        page-break-before: always;
+        padding-top: 0 !important;
+    }
+
+    /* Preserve all colors */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    /* Sidebar print colors */
+    .sidebar-print {
+        background-color: #edf0ee !important;
+        width: 250px !important;
+        padding: 1.5rem !important;
+        gap: 1.25rem !important;
+    }
+    .profile-circle-print { background-color: rgb(0 117 23 / 0.1) !important; }
+
+    /* Explicit color preservation */
+    .bg-primary { background-color: #007517 !important; }
+    .bg-forest-mid { background-color: #00735c !important; }
+    .bg-forest-dark { background-color: #00493a !important; }
+    .text-primary { color: #007517 !important; }
+    .text-forest-mid { color: #00735c !important; }
+    .text-forest-dark { color: #00493a !important; }
+    .border-primary { border-color: #007517 !important; }
+
+    /* Timeline dots */
+    .bg-primary.rounded-full { background-color: #007517 !important; }
+    .bg-forest-mid.rounded-full { background-color: #00735c !important; }
+
+    /* Container wrapper */
+    .flex.justify-center {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Hide screen-only elements */
+    .print\\:py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+    .print\\:px-0 { padding-left: 0 !important; padding-right: 0 !important; }
+    .print\\:rounded-none { border-radius: 0 !important; }
+    .print\\:border-none { border: none !important; }
+
+    /* Reduce spacing and font sizes for print */
+    .a4-container .flex-1 {
+        padding: 1.75rem !important;
+    }
+
+    .a4-container .gap-10 {
+        gap: 1.5rem !important;
+    }
+
+    .a4-container .gap-6 {
+        gap: 1rem !important;
+    }
+
+    .a4-container .gap-8 {
+        gap: 1.25rem !important;
+    }
+
+    /* Reduce timeline entry spacing */
+    .border-l-2 .relative {
+        margin-bottom: 0 !important;
+    }
+
+    .border-l-2.gap-10 {
+        gap: 1.25rem !important;
+    }
+
+    /* Slightly smaller text for job descriptions */
+    .a4-container ul.list-disc {
+        gap: 0.125rem !important;
+    }
+
+    .a4-container ul.list-disc li {
+        line-height: 1.4 !important;
+    }
+
+    /* Tech tags spacing */
+    .a4-container .mt-2.flex.flex-wrap {
+        margin-top: 0.375rem !important;
+        gap: 0.25rem !important;
+    }
+}
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.fill-icon {
+    font-variation-settings: 'FILL' 1;
+}

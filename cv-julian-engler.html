@@ -1,532 +1,505 @@
 <!DOCTYPE html>
 <html class="light" lang="de"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Julian Engler - Tech Lead / Teamlead Softwareentwicklung</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                colors: {
-                    "primary": "#007517",
-                    "forest-dark": "#00493a",
-                    "forest-mid": "#00735c",
-                    "cool-gray-light": "#edf0ee",
-                    "cool-gray-text": "#606462",
-                    "background-light": "#f5f8f6",
-                    "background-dark": "#0f2313",
-                },
-                fontFamily: {
-                    "display": ["Inter", "sans-serif"]
-                },
-                borderRadius: {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-                },
-            },
-        },
-    }
-</script>
-<style>
-    @media print {
-        .no-print { display: none !important; }
-        
-        html, body {
-            width: 210mm;
-            height: 297mm;
-            margin: 0 !important;
-            padding: 0 !important;
-            background: white !important;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-            color-adjust: exact !important;
-        }
-        
-        .a4-container {
-            box-shadow: none !important;
-            margin: 0 !important;
-            border: none !important;
-            border-radius: 0 !important;
-            width: 210mm !important;
-            min-height: 297mm !important;
-            max-width: none !important;
-            page-break-after: always;
-            page-break-inside: avoid;
-        }
-        
-        .page-break {
-            page-break-before: always;
-            padding-top: 0 !important;
-        }
-        
-        /* Preserve all colors */
-        * {
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-            color-adjust: exact !important;
-        }
-        
-        /* Sidebar print colors */
-        .sidebar-print { background-color: #edf0ee !important; }
-        .profile-circle-print { background-color: #00735c !important; }
-        
-        /* Explicit color preservation */
-        .bg-primary { background-color: #007517 !important; }
-        .bg-forest-mid { background-color: #00735c !important; }
-        .bg-forest-dark { background-color: #00493a !important; }
-        .text-primary { color: #007517 !important; }
-        .text-forest-mid { color: #00735c !important; }
-        .text-forest-dark { color: #00493a !important; }
-        .border-primary { border-color: #007517 !important; }
-        
-        /* Timeline dots */
-        .bg-primary.rounded-full { background-color: #007517 !important; }
-        .bg-forest-mid.rounded-full { background-color: #00735c !important; }
-        
-        /* Container wrapper */
-        .flex.justify-center {
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-        
-        /* Hide screen-only elements */
-        .print\\:py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
-        .print\\:px-0 { padding-left: 0 !important; padding-right: 0 !important; }
-        .print\\:rounded-none { border-radius: 0 !important; }
-        .print\\:border-none { border: none !important; }
-    }
-    
-    @page {
-        size: A4 portrait;
-        margin: 0;
-    }
-    
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    .fill-icon {
-        font-variation-settings: 'FILL' 1;
-    }
-</style>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Julian Engler - Tech Lead / Teamlead Softwareentwicklung</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="assets/style.css" rel="stylesheet" type="text/css" />
+    <script src="assets/tailwind.config.js"></script>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-[#0c1d10] transition-colors duration-300">
 
-<!-- Toolbar -->
-<div class="no-print sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-cool-gray-light dark:border-white/10">
-    <div class="max-w-[900px] mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="flex gap-2">
-            <button class="p-2 text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-lg transition-colors" onclick="window.print()">
-                <span class="material-symbols-outlined">print</span>
-            </button>
-        </div>
-        <div class="flex items-center gap-4">
-            <button class="p-2 bg-white dark:bg-zinc-800 rounded-full shadow-sm" onclick="document.documentElement.classList.toggle('dark')">
-                <span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
-                <span class="material-symbols-outlined text-[20px] hidden dark:block text-yellow-500">light_mode</span>
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Page 1 -->
-<div class="flex justify-center py-10 px-4 print:py-0 print:px-0">
-    <div class="a4-container bg-white dark:bg-zinc-900 w-full max-w-[900px] min-h-[1150px] shadow-2xl flex overflow-hidden rounded-xl print:rounded-none border border-cool-gray-light dark:border-white/5 print:border-none">
-        
-        <!-- Sidebar -->
-        <div class="w-[300px] bg-cool-gray-light dark:bg-zinc-800/50 p-8 flex flex-col gap-8 border-r border-cool-gray-light dark:border-white/5 sidebar-print">
-            
-            <!-- Profile Photo Placeholder -->
-            <div class="flex flex-col items-center text-center gap-4">
-                <div class="w-32 h-32 rounded-full border-4 border-white dark:border-zinc-700 shadow-sm bg-forest-mid dark:bg-forest-mid flex items-center justify-center profile-circle-print">
-                    <span class="text-white text-4xl font-bold">JE</span>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-forest-dark dark:text-white">Julian Engler</h1>
-                    <p class="text-forest-mid dark:text-primary font-medium text-sm">Tech Lead / Teamlead Softwareentwicklung</p>
-                </div>
+    <!-- Toolbar -->
+    <div class="no-print sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-cool-gray-light dark:border-white/10">
+        <div class="max-w-[900px] mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex gap-2">
+                <button class="w-10 h-10 flex items-center justify-center text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-full transition-colors" onclick="window.print()">
+                    <span class="material-symbols-outlined text-[20px]">print</span>
+                </button>
             </div>
-            
-            <!-- Contact Info -->
-            <div class="flex flex-col gap-3">
-                <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
-                    <span class="material-symbols-outlined text-forest-mid text-[20px]">mail</span>
-                    <span class="text-xs truncate">info@julian-engler.de</span>
-                </div>
-                <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
-                    <span class="material-symbols-outlined text-forest-mid text-[20px]">phone_iphone</span>
-                    <span class="text-xs">0174 / 3417833</span>
-                </div>
-                <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
-                    <span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
-                    <span class="text-xs">Berlin, Deutschland</span>
-                </div>
-            </div>
-
-            <!-- Technical Skills -->
-            <div class="flex flex-col gap-4">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Technische Skills</h3>
-                
-                <div class="flex flex-col gap-3">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-forest-mid text-[18px]">code</span>
-                        <p class="text-xs font-bold dark:text-gray-300">Sprachen</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pl-6">
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">PHP</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Go</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">JavaScript</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">TypeScript</span>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col gap-3">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-forest-mid text-[18px]">database</span>
-                        <p class="text-xs font-bold dark:text-gray-300">Datenbanken</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pl-6">
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">MySQL</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">PostgreSQL</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Redis</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">IBM DB2</span>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col gap-3">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-forest-mid text-[18px]">terminal</span>
-                        <p class="text-xs font-bold dark:text-gray-300">Tools & Methoden</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pl-6">
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Docker</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Git</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">REST</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">TDD</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">SOA</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Schwerpunkte -->
-            <div class="flex flex-col gap-4">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Schwerpunkte</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">E-Commerce</span>
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">ERP-Systeme</span>
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Checkout</span>
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">API-Design</span>
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Skalierung</span>
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Team-Coaching</span>
-                </div>
-            </div>
-
-            <!-- Languages -->
-            <div class="flex flex-col gap-4">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Sprachen</h3>
-                <div class="flex flex-col gap-2">
-                    <div class="flex justify-between">
-                        <span class="text-xs dark:text-gray-300">Deutsch</span>
-                        <span class="text-[11px] text-forest-mid font-medium">Muttersprache</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-xs dark:text-gray-300">Englisch</span>
-                        <span class="text-[11px] text-forest-mid font-medium">Fließend</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="mt-auto flex flex-col gap-2 pt-6">
-                <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/50 dark:bg-zinc-700/50">
-                    <span class="material-symbols-outlined text-[20px] text-forest-mid">link</span>
-                    <p class="text-xs font-medium dark:text-gray-300">linkedin.com/in/julian-engler</p>
-                </div>
-                <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/50 dark:bg-zinc-700/50">
-                    <span class="material-symbols-outlined text-[20px] text-forest-mid">link</span>
-                    <p class="text-xs font-medium dark:text-gray-300">xing.com/profile/Julian_Engler</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="flex-1 p-10 flex flex-col gap-10">
-            
-            <!-- Header -->
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-2">
-                    <p class="text-3xl font-black tracking-tight text-forest-dark dark:text-white">Julian Engler</p>
-                    <div class="h-1 w-16 bg-primary dark:bg-primary rounded-full"></div>
-                </div>
-                <p class="text-sm leading-relaxed text-cool-gray-text dark:text-gray-400 max-w-[580px]">
-                    Softwareentwickler (Schwerpunkt PHP) mit Erfahrung in E-Commerce, ERP sowie Vergleichsportal inkl. Checkout. 
-                    In Führungsrollen als Teamlead/Tech Lead Fokus auf Architektur und Projektsteuerung – von Konzeption über 
-                    Umsetzung bis Stabilität/Skalierung. Tech: PHP, Go, JavaScript, MySQL/PostgreSQL, Redis.
-                </p>
-            </div>
-
-            <!-- Professional Experience -->
-            <div class="flex flex-col gap-6">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-forest-mid">work</span>
-                    <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight">Berufserfahrung</h2>
-                </div>
-                
-                <div class="relative ml-3 flex flex-col gap-10 border-l-2 border-cool-gray-light dark:border-zinc-800 pl-8">
-                    
-                    <!-- CHECK24 - Teamlead -->
-                    <div class="relative">
-                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-primary dark:bg-primary border-4 border-white dark:border-zinc-900 rounded-full"></div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex justify-between items-start gap-2">
-                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Teamlead Softwareentwicklung</h3>
-                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">04/2025 - Heute</span>
-                            </div>
-                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">CHECK24 Vergleichsportal Flug GmbH</p>
-                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                <li>Fachliche und disziplinarische Führung eines Entwicklungsteams</li>
-                                <li>Planung und Konzeption zentraler Initiativen (Checkout- und Bestellprozesse)</li>
-                                <li>Projekte: B2B-Schnittstelle Kassenprozess, VCC-System-Anbindung, PHP-Stack-Modernisierung</li>
-                            </ul>
-                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
-                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Redis</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Resque</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CHECK24 - Stellv. Teamlead -->
-                    <div class="relative">
-                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex justify-between items-start gap-2">
-                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Stellv. Teamlead Softwareentwicklung</h3>
-                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">04/2024 - 03/2025</span>
-                            </div>
-                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">CHECK24 Vergleichsportal Flug GmbH</p>
-                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                <li>Unterstützung der Teamleitung in Projektsteuerung und Personalthemen</li>
-                                <li>Stabilisierung und Skalierung zentraler Anwendungsteile</li>
-                                <li>Projekte: Punktesystem-Integration, Anbindung neues Flug-Quellsystem</li>
-                            </ul>
-                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
-                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Redis</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CHECK24 - Senior -->
-                    <div class="relative">
-                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex justify-between items-start gap-2">
-                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Senior Software Developer</h3>
-                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">11/2022 - 03/2024</span>
-                            </div>
-                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">CHECK24 Vergleichsportal Flug GmbH</p>
-                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                                <li>Portierung der Suche aus PHP als eigenständiger Go-Service zur besseren Skalierbarkeit</li>
-                                <li>Umsetzung eines asynchronen Checkouts zur robusteren Verarbeitung</li>
-                            </ul>
-                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
-                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Go</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
-                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Redis</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="flex items-center gap-4">
+                <button class="w-10 h-10 flex items-center justify-center text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined text-[20px] hidden dark:block text-yellow-500">light_mode</span>
+                </button>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Page 2 -->
-<div class="flex justify-center py-10 px-4 print:py-0 print:px-0 page-break">
-    <div class="a4-container bg-white dark:bg-zinc-900 w-full max-w-[900px] min-h-[1150px] shadow-2xl flex overflow-hidden rounded-xl print:rounded-none border border-cool-gray-light dark:border-white/5 print:border-none">
-        
-        <!-- Sidebar Page 2 -->
-        <div class="w-[300px] bg-cool-gray-light dark:bg-zinc-800/50 p-8 flex flex-col gap-8 border-r border-cool-gray-light dark:border-white/5 sidebar-print">
-            
-            <!-- Education -->
-            <div class="flex flex-col gap-4">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Ausbildung</h3>
+    <!-- Page 1 -->
+    <div class="flex justify-center py-10 px-4 print:py-0 print:px-0">
+        <div class="a4-container bg-white dark:bg-zinc-900 w-full max-w-[900px] min-h-[1150px] shadow-2xl flex overflow-hidden rounded-xl print:rounded-none border border-cool-gray-light dark:border-white/5 print:border-none">
+
+            <!-- Sidebar -->
+            <div class="w-[300px] bg-cool-gray-light dark:bg-zinc-800/50 p-8 flex flex-col gap-8 border-r border-cool-gray-light dark:border-white/5 sidebar-print">
+
+                <!-- Profile Photo Placeholder -->
+                <div class="flex flex-col items-center text-center gap-4">
+                    <div class="w-32 h-32 rounded-full border-4 border-white dark:border-zinc-700 shadow-sm bg-cover profile-circle-print"
+                        style="background-image: url('./assets/profil_pic.png'); background-position: center 20%; background-color: rgb(0 117 23 / 0.1);">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-forest-dark dark:text-white">Julian Engler</h1>
+                        <p class="text-forest-mid dark:text-primary font-medium text-sm">Tech Lead / Teamlead Softwareentwicklung</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">mail</span>
+                        <span class="text-xs truncate">contact+cv@julian-engler.de</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">phone_iphone</span>
+                        <span class="text-xs">0174 / 3417833</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
+                        <span class="text-xs">Berlin, Deutschland</span>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
                 <div class="flex flex-col gap-4">
-                    <div class="flex flex-col gap-1">
-                        <p class="text-xs font-bold dark:text-gray-300">Fachinformatiker Anwendungsentwicklung</p>
-                        <p class="text-[11px] text-cool-gray-text dark:text-gray-400">notebooksbilliger.de AG</p>
-                        <p class="text-[10px] text-forest-mid font-medium italic">08/2008 - 01/2011</p>
-                        <p class="text-[10px] text-cool-gray-text dark:text-gray-400">Abschlussnote: 79 Punkte</p>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <p class="text-xs font-bold dark:text-gray-300">Wirtschaftsinformatik (B.Sc.)</p>
-                        <p class="text-[11px] text-cool-gray-text dark:text-gray-400">Hochschule Mittweida</p>
-                        <p class="text-[10px] text-forest-mid font-medium italic">09/2006 - 07/2008</p>
-                        <p class="text-[10px] text-cool-gray-text dark:text-gray-400">3 Semester (ohne Abschluss)</p>
-                    </div>
-                </div>
-            </div>
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Technische Skills</h3>
 
-            <!-- Qualifications -->
-            <div class="flex flex-col gap-4">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Qualifikationen</h3>
-                <div class="flex flex-col gap-3">
-                    <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
-                        <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
-                        <div>
-                            <p class="text-[11px] font-bold dark:text-gray-200 leading-tight">Ausbilder gem. Ausbilder-Eignungsverordnung</p>
-                            <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">IHK Berlin</p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-forest-mid text-[18px]">code</span>
+                            <p class="text-xs font-bold dark:text-gray-300">Sprachen</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">PHP</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Go</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">JavaScript</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">TypeScript</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Laminas</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Symfony</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">SvelteJs</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">VueJs</span>
                         </div>
                     </div>
-                    <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
-                        <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
-                        <div>
-                            <p class="text-[11px] font-bold dark:text-gray-200">Führerschein Klasse B</p>
-                            <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">EU-Standard</p>
+
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-forest-mid text-[18px]">database</span>
+                            <p class="text-xs font-bold dark:text-gray-300">Datenbanken</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">MySQL</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">PostgreSQL</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">IBM DB2</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-forest-mid text-[18px]">terminal</span>
+                            <p class="text-xs font-bold dark:text-gray-300">Tools & Methoden</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Docker</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Git</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Linux (Debian/Ubuntu)</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">REST</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">TDD</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">SOA</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Contact Repeat -->
-            <div class="mt-auto flex flex-col gap-3">
-                <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
-                    <span class="material-symbols-outlined text-forest-mid text-[20px]">mail</span>
-                    <span class="text-xs">info@julian-engler.de</span>
+                <!-- Schwerpunkte -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Schwerpunkte</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">E-Commerce</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">ERP-Systeme</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Checkout & Payment</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">API-Design</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Skalierung</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Team-Coaching</span>
+                    </div>
                 </div>
-                <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
-                    <span class="material-symbols-outlined text-forest-mid text-[20px]">phone_iphone</span>
-                    <span class="text-xs">0174 / 3417833</span>
-                </div>
-                <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
-                    <span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
-                    <span class="text-xs">Berlin, Deutschland</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Main Content Page 2 -->
-        <div class="flex-1 p-10 flex flex-col gap-10">
-            
-            <!-- Header Page 2 -->
-            <div class="flex flex-col gap-4">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-forest-mid">work</span>
-                    <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight">Berufserfahrung (Fortsetzung)</h2>
-                </div>
-            </div>
-
-            <!-- Continued Experience -->
-            <div class="relative ml-3 flex flex-col gap-10 border-l-2 border-cool-gray-light dark:border-zinc-800 pl-8">
-                
-                <!-- SOWHAT Lead -->
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                <!-- Languages -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Sprachen</h3>
                     <div class="flex flex-col gap-2">
-                        <div class="flex justify-between items-start gap-2">
-                            <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Lead Backend Development</h3>
-                            <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">01/2017 - 02/2022</span>
+                        <div class="flex justify-between">
+                            <span class="text-xs dark:text-gray-300">Deutsch</span>
+                            <span class="text-[11px] text-forest-mid font-medium">Muttersprache</span>
                         </div>
-                        <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">SOWHAT! (c/o Websling GmbH)</p>
-                        <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                            <li>Leitung eines Backend-Teams (3 Entwickler)</li>
-                            <li>Planung, Konzeption und Sicherung der Code-Qualität im Team</li>
-                            <li>Begleitung neuer Shop-Systeme von Akquise über Entwicklung bis Go-Live</li>
-                        </ul>
-                        <div class="mt-2 flex flex-wrap gap-1.5 items-center">
-                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">VueJS</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Docker</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Shopware</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SOWHAT Senior -->
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
-                    <div class="flex flex-col gap-2">
-                        <div class="flex justify-between items-start gap-2">
-                            <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Senior Backend Developer</h3>
-                            <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">06/2016 - 01/2017</span>
-                        </div>
-                        <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">SOWHAT! (c/o Websling GmbH)</p>
-                        <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                            <li>Konzeption, Entwicklung und Wartung von Shopware-Plugins</li>
-                            <li>Einbindung von Fremdsystemen via APIs, Bereitstellung & Dokumentation von APIs</li>
-                        </ul>
-                        <div class="mt-2 flex flex-wrap gap-1.5 items-center">
-                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">extJS</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Shopware</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- exitB -->
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
-                    <div class="flex flex-col gap-2">
-                        <div class="flex justify-between items-start gap-2">
-                            <h3 class="text-base font-bold text-forest-dark dark:text-white/90">E-Commerce Developer</h3>
-                            <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">05/2014 - 05/2016</span>
-                        </div>
-                        <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">exitB GmbH</p>
-                        <p class="text-xs text-cool-gray-text dark:text-gray-400 italic">(Details auf Anfrage)</p>
-                    </div>
-                </div>
-
-                <!-- notebooksbilliger -->
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
-                    <div class="flex flex-col gap-2">
-                        <div class="flex justify-between items-start gap-2">
-                            <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Web Developer</h3>
-                            <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">01/2011 - 04/2014</span>
-                        </div>
-                        <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">notebooksbilliger.de AG</p>
-                        <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
-                            <li>Weiterentwicklung und Betreuung des Shop-Systems (Frontend & Backend)</li>
-                            <li>Planung und Umsetzung von Projekten zur Kundenfindung/-bindung</li>
-                            <li>Optimierung bestehender Prozesse und Refactoring von Code-Architekturen</li>
-                        </ul>
-                        <div class="mt-2 flex flex-wrap gap-1.5 items-center">
-                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">JavaScript</span>
-                            <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">jQuery</span>
+                        <div class="flex justify-between">
+                            <span class="text-xs dark:text-gray-300">Englisch</span>
+                            <span class="text-[11px] text-forest-mid font-medium">Fließend</span>
                         </div>
                     </div>
                 </div>
 
             </div>
 
+            <!-- Main Content -->
+            <div class="flex-1 p-10 flex flex-col gap-10">
+
+                <!-- Header -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-3xl font-black tracking-tight text-forest-dark dark:text-white">Julian Engler</p>
+                        <div class="h-1 w-16 bg-primary dark:bg-primary rounded-full"></div>
+                    </div>
+                    <p class="text-sm leading-relaxed text-cool-gray-text dark:text-gray-400 max-w-[580px]">
+                        Seit 2008 entwickle ich Software mit Schwerpunkt PHP – vom E-Commerce-Full-Stack über
+                        Backend-Services bis zur ERP-Entwicklung. Seit 2023 arbeite ich bei einem Vergleichsportal
+                        (Flug, Checkout) an skalierbaren, stabilen Systemen. Als Engineering Team Lead liegt mein
+                        Fokus auf technischer Architektur und Projektsteuerung: Ich strukturiere Anforderungen,
+                        entwerfe Lösungen, mache Risiken frühzeitig sichtbar und steuere die Umsetzung so, dass Teams
+                        verlässlich liefern. Wichtig sind mir klare Kommunikation, nachvollziehbare Entscheidungen und
+                        nachhaltige Qualität.
+                    </p>
+                </div>
+
+                <!-- Professional Experience -->
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-forest-mid">work</span>
+                        <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight">Berufserfahrung</h2>
+                    </div>
+
+                    <div class="relative ml-3 flex flex-col gap-10 border-l-2 border-cool-gray-light dark:border-zinc-800 pl-8">
+
+                        <!-- CHECK24 - Teamlead -->
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-4 h-4 bg-primary dark:bg-primary border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between items-start gap-2">
+                                    <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Teamlead Softwareentwicklung</h3>
+                                    <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">04/2025 - 04/2026</span>
+                                </div>
+                                <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">CHECK24 Vergleichsportal Flug GmbH</p>
+                                <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                    <li>Fachliche und disziplinarische Führung eines Entwicklungsteams (Personalverantwortung, Coaching, Teamorganisation)</li>
+                                    <li>Planung und Konzeption zentraler Initiativen rund um Checkout- und Bestellprozesse Betreuung der Umsetzung (Priorisierung, technische Entscheidungen, Abstimmung mit Stakeholdern, Qualitätssicherung)</li>
+                                    <li>Projekte: B2B-Schnittstelle für den Kassenprozess, Anbindung eines neuen VCC-Systems, Modernisierung des PHP-Stacks</li>
+                                </ul>
+                                <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                    <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Redis</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Resque Queue</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">RESTFul API</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CHECK24 - Stellv. Teamlead -->
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between items-start gap-2">
+                                    <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Stellv. Teamlead Softwareentwicklung</h3>
+                                    <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">04/2024 - 03/2025</span>
+                                </div>
+                                <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">CHECK24 Vergleichsportal Flug GmbH</p>
+                                <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                    <li>Unterstützung der Teamleitung in Projektsteuerung und Personalthemen</li>
+                                    <li>Stabilisierung und Skalierung zentraler Anwendungsteile mit Fokus auf robuste Abläufe und Qualität</li>
+                                    <li>Projekte: Einlösen eines Punktesystems, Stabilisierung & Skalierung, Anbindung eines neuen Flug-Quellsystems (Pricing & Bestellung)</li>
+                                </ul>
+                                <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                    <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Redis</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Resque Queue</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">RESTFul API</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CHECK24 - Senior -->
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between items-start gap-2">
+                                    <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Senior Software Developer</h3>
+                                    <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">11/2022 - 03/2024</span>
+                                </div>
+                                <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">CHECK24 Vergleichsportal Flug GmbH</p>
+                                <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                    <li>Portierung/Auskopplung der Suche aus der PHP-Anwendung als eigenständiger Go-Service zur besseren Skalierbarkeit</li>
+                                    <li>Umsetzung eines asynchronen Checkouts zur robusteren Verarbeitung der Bestellstrecke</li>
+                                </ul>
+                                <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                    <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Go</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Redis</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">RESTFul API</span>
+                                    <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Footer -->
-<div class="no-print w-full py-8 flex flex-col items-center gap-3 text-cool-gray-text dark:text-gray-500 text-xs">
-    <p>© 2025 Julian Engler — A4 Format für Druck optimiert</p>
-</div>
+    <!-- Page 2 -->
+    <div class="flex justify-center py-10 px-4 print:py-0 print:px-0 page-break">
+        <div class="a4-container bg-white dark:bg-zinc-900 w-full max-w-[900px] min-h-[1150px] shadow-2xl flex overflow-hidden rounded-xl print:rounded-none border border-cool-gray-light dark:border-white/5 print:border-none">
 
-</body></html>
+            <!-- Sidebar Page 2 -->
+            <div class="w-[300px] bg-cool-gray-light dark:bg-zinc-800/50 p-8 flex flex-col gap-8 border-r border-cool-gray-light dark:border-white/5 sidebar-print">
+
+                <!-- Education -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Ausbildung</h3>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                            <p class="text-xs font-bold dark:text-gray-300">
+                                Ausbildung - Fachinformatiker Anwendungsentwicklung
+                            </p>
+                            <p class="text-[11px] text-cool-gray-text dark:text-gray-400">notebooksbilliger.de AG</p>
+                            <p class="text-[10px] text-forest-mid font-medium italic">08/2008 - 01/2011</p>
+                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400">Abschlussnote: 79 Punkte</p>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <p class="text-xs font-bold dark:text-gray-300">Studium Wirtschaftsinformatik (B.Sc., ohne Abschluss)</p>
+                            <p class="text-[11px] text-cool-gray-text dark:text-gray-400">Hochschule Mittweida</p>
+                            <p class="text-[10px] text-forest-mid font-medium italic">09/2006 - 07/2008</p>
+                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400">3 Semester, Fakultät: Mathematik / Naturwissenschaften / Informatik</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qualifications -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1">Qualifikationen</h3>
+                    <div class="flex flex-col gap-3">
+                        <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
+                            <div>
+                                <p class="text-[11px] font-bold dark:text-gray-200 leading-tight">Ausbilder gem. Ausbilder-Eignungsverordnung</p>
+                                <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">IHK Berlin</p>
+                            </div>
+                        </div>
+                        <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
+                            <div>
+                                <p class="text-[11px] font-bold dark:text-gray-200">Führerschein Klasse B</p>
+                                <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">EU-Standard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-auto flex flex-col gap-2">
+                    <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/50 dark:bg-zinc-700/50">
+                        <span class="material-symbols-outlined text-[20px] text-forest-mid">link</span>
+                        <a href="https://linkedin.com/in/julian-engler" class="text-xs font-medium dark:text-gray-300">LinkedIn</a>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/50 dark:bg-zinc-700/50">
+                        <span class="material-symbols-outlined text-[20px] text-forest-mid">link</span>
+                        <a href="https://xing.com/profile/Julian_Engler" class="text-xs font-medium dark:text-gray-300">Xing</a>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-cool-gray-text/20"></div>
+
+                <!-- Contact Repeat -->
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">mail</span>
+                        <span class="text-xs">contact+cv@julian-engler.de</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">phone_iphone</span>
+                        <span class="text-xs">0174 / 3417833</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
+                        <span class="text-xs">Berlin, Deutschland</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Page 2 -->
+            <div class="flex-1 p-10 flex flex-col gap-10">
+
+                <!-- Header Page 2 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-forest-mid">work</span>
+                        <h2 class="text-lg font-bold text-forest-dark dark:text-white tracking-tight">Berufserfahrung (Fortsetzung)</h2>
+                    </div>
+                </div>
+
+                <!-- Continued Experience -->
+                <div class="relative ml-3 flex flex-col gap-10 border-l-2 border-cool-gray-light dark:border-zinc-800 pl-8">
+
+                    <!-- career reorientation -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Berufliche Neuorientierung</h3>
+                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">08/2022 - 10/2022</span>
+                            </div>
+                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">Arbeitssuchend</p>
+                        </div>
+                    </div>
+
+                    <!-- FOO AG Senior -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Senior Backend Developer</h3>
+                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">03/2022 - 07/2022</span>
+                            </div>
+                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">Foo AG & Co KG</p>
+                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                <li>Weiterentwicklung eines bestehenden Finanzdienstleistungs-Systems</li>
+                                <li>Sicherstellung der Programmqualität durch Unit-Tests und Code-Reviews</li>
+                                <li>Erstellung von Entwickler- und Anwenderdokumentationen</li>
+                            </ul>
+                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PostgreSQL</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Angular</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">TypeScript</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Symfony</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOWHAT Lead -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Lead Backend Development</h3>
+                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">01/2017 - 02/2022</span>
+                            </div>
+                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">SOWHAT! (c/o Websling GmbH)</p>
+                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                <li>Leitung eines Backend-Teams (3 Entwickler)</li>
+                                <li>Planung, Konzeption und Sicherung der Code-Qualität im Team</li>
+                                <li>Begleitung neuer Shop-Systeme von Akquise über Entwicklung bis Go-Live</li>
+                            </ul>
+                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">VueJS</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">extJS</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Docker</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Shopware</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOWHAT Senior -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Senior Backend Developer</h3>
+                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">06/2016 - 01/2017</span>
+                            </div>
+                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">SOWHAT! (c/o Websling GmbH)</p>
+                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                <li>Konzeption, Entwicklung und Wartung von Shopware-Plugins</li>
+                                <li>Einbindung von Fremdsystemen via APIs</li>
+                                <li>Bereitstellung und Dokumentation von APIs für Fremdsysteme</li>
+                            </ul>
+                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">extJS</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Docker</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Shopware</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- exitB -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Software Developer</h3>
+                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">05/2014 - 05/2016</span>
+                            </div>
+                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">exitB GmbH</p>
+                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                <li>Weiterentwicklung des exitB ERP-Systems inkl. API- und Plugin-Entwicklung für die Shop-ERP-Integration</li>
+                                <li>Konzeptionierung und Umsetzung von Webanwendungen: PWA Pick-App und POS-System mit internen Bezahlmethoden</li>
+                                <li>Implementierung einer Vorkassen-Auszifferung mit Gegenkonto-Prüfung</li>
+                            </ul>
+                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">IBM DB2</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">extJS</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">jQuery</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Vagrant</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Shopware</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- notebooksbilliger -->
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-forest-mid dark:bg-forest-mid border-4 border-white dark:border-zinc-900 rounded-full"></div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="text-base font-bold text-forest-dark dark:text-white/90">Web Developer</h3>
+                                <span class="text-[11px] font-bold text-forest-mid dark:text-primary px-2 py-0.5 bg-cool-gray-light dark:bg-primary/10 rounded whitespace-nowrap">01/2011 - 04/2014</span>
+                            </div>
+                            <p class="text-sm font-semibold text-cool-gray-text dark:text-gray-300">notebooksbilliger.de AG</p>
+                            <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                <li>Weiterentwicklung und Betreuung des Shop-Systems (Frontend & Backend)</li>
+                                <li>Planung und Umsetzung von Projekten zur Kundenfindung/-bindung</li>
+                                <li>Optimierung bestehender Prozesse und Refactoring bestehender Code-Architekturen</li>
+                            </ul>
+                            <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase">Tech:</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">PHP</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">MySQL</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">JavaScript</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">jQuery</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">CSS</span>
+                                <span class="px-2 py-0.5 rounded-full border border-cool-gray-text/30 text-[10px] text-cool-gray-text dark:text-gray-400">Vagrant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="no-print w-full py-8 flex flex-col items-center gap-3 text-cool-gray-text dark:text-gray-500 text-xs">
+        <p>© 2025 Julian Engler — A4 Format für Druck optimiert</p>
+    </div>
+
+</body>
+</html>
