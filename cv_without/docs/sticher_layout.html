@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Developer Resume - Alex Rivera</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007517",
+                        "forest-dark": "#00493a",
+                        "forest-mid": "#00735c",
+                        "cool-gray-light": "#edf0ee",
+                        "cool-gray-text": "#606462",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#0f2313",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; padding: 0 !important; }
+            .a4-container { box-shadow: none !important; margin: 0 !important; width: 100% !important; border: none !important; }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0c1d10] transition-colors duration-300">
+<div class="no-print sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-cool-gray-light dark:border-white/10">
+<div class="max-w-[1000px] mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex gap-2">
+<button class="p-2 text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+<button class="p-2 text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-lg transition-colors" onclick="window.print()">
+<span class="material-symbols-outlined">print</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-forest-dark text-white rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px] fill-icon">share</span>
+<span>Share Profile</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex justify-center py-10 px-4">
+<div class="a4-container bg-white dark:bg-zinc-900 w-full max-w-[900px] min-h-[1150px] shadow-2xl flex overflow-hidden rounded-xl border border-cool-gray-light dark:border-white/5">
+<div class="w-[280px] bg-cool-gray-light dark:bg-zinc-800/50 p-8 flex flex-col justify-between border-r border-cool-gray-light dark:border-white/5">
+<div class="flex flex-col gap-12 h-full">
+<div class="flex items-center gap-3 pt-2">
+<div class="flex items-center justify-center w-12 h-12 bg-forest-mid rounded-lg">
+<span class="text-white text-xl font-black tracking-tighter">AR</span>
+</div>
+<div class="flex-1 h-[4px] bg-forest-mid rounded-full"></div>
+</div>
+<div class="flex flex-col gap-5">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-forest-mid pb-2">Contact</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+<span class="material-symbols-outlined text-forest-mid text-[20px]">mail</span>
+<span class="text-[11px] font-medium truncate">alex.rivera@techmail.com</span>
+</div>
+<div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+<span class="material-symbols-outlined text-forest-mid text-[20px]">phone_iphone</span>
+<span class="text-[11px] font-medium">+1 (555) 012-3456</span>
+</div>
+<div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+<span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
+<span class="text-[11px] font-medium">Berlin, Germany</span>
+</div>
+<div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+<span class="material-symbols-outlined text-forest-mid text-[20px]">language</span>
+<span class="text-[11px] font-medium">alexrivera.dev</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-forest-mid pb-2">Technical Skills</h3>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-forest-mid text-[18px]">code</span>
+<p class="text-xs font-bold dark:text-gray-300">Frontend</p>
+</div>
+<div class="flex flex-wrap gap-2 pl-1">
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">React</span>
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">TypeScript</span>
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">Tailwind</span>
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">Next.js</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-forest-mid text-[18px]">database</span>
+<p class="text-xs font-bold dark:text-gray-300">Backend</p>
+</div>
+<div class="flex flex-wrap gap-2 pl-1">
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">Node.js</span>
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">PostgreSQL</span>
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">Go</span>
+<span class="text-[9px] px-2 py-1 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5 font-semibold">Redis</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-5">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-forest-mid pb-2">Qualifikationen</h3>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-xs font-bold dark:text-gray-300">Ausbilder gem. AEVO</p>
+<p class="text-[10px] text-cool-gray-text dark:text-gray-500">IHK Berlin</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-xs font-bold dark:text-gray-300">Führerschein Klasse B</p>
+<p class="text-[10px] text-cool-gray-text dark:text-gray-500">EU-Standard</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 mt-auto">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-forest-mid pb-2">Education</h3>
+<div class="flex flex-col gap-1">
+<p class="text-xs font-bold dark:text-gray-300">M.Sc. Computer Science</p>
+<p class="text-[11px] text-cool-gray-text dark:text-gray-400">TU Berlin</p>
+<p class="text-[10px] text-forest-mid font-medium italic">2014 - 2016</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 p-10 flex flex-col gap-10">
+<div class="flex flex-col gap-3">
+<div class="flex flex-col">
+<h1 class="text-5xl font-black tracking-tighter text-forest-dark dark:text-white uppercase leading-none">Alex Rivera</h1>
+<div class="flex items-center gap-3 mt-2">
+<span class="text-xl font-medium text-forest-mid dark:text-primary tracking-tight">Senior Software Architect</span>
+<div class="h-[2px] flex-1 bg-cool-gray-light dark:bg-zinc-800"></div>
+</div>
+</div>
+<p class="text-sm leading-relaxed text-cool-gray-text dark:text-gray-400 max-w-[580px] mt-4">
+                    Solution-oriented engineer with a focus on scalable systems and team leadership. Expert in driving technical excellence through modern architectures and agile methodologies.
+                </p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-forest-mid">work</span>
+<h2 class="text-xl font-bold text-forest-dark dark:text-white tracking-tight">Work Experience</h2>
+</div>
+<div class="flex flex-col gap-10">
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="text-sm font-bold text-cool-gray-text dark:text-gray-500 uppercase tracking-[0.2em]">Tech Solutions SE</h3>
+<span class="text-[10px] font-bold text-cool-gray-text/60 dark:text-gray-500 italic">Jan 2018 - Present</span>
+</div>
+<div class="flex flex-col gap-8 relative border-l border-cool-gray-light dark:border-zinc-800 ml-1">
+<div class="pl-6 relative">
+<div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-forest-dark border-2 border-white dark:border-zinc-900"></div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<h4 class="text-xl font-bold text-forest-dark dark:text-white">Teamlead</h4>
+<span class="text-[9px] font-bold text-forest-mid bg-forest-mid/10 px-2 py-0.5 rounded-full uppercase">since Jan 2022</span>
+</div>
+<ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed space-y-1">
+<li>Leading a cross-functional team of 12 engineers in the fintech sector.</li>
+<li>Defined technical roadmap and architectural standards for cloud-native microservices.</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Kubernetes</span>
+<span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Go</span>
+<span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">System Design</span>
+</div>
+</div>
+</div>
+<div class="pl-6 relative">
+<div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-cool-gray-text/30 border-2 border-white dark:border-zinc-900"></div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<h4 class="text-base font-bold text-forest-dark dark:text-white">Stellvertretender Teamlead</h4>
+<span class="text-[9px] font-semibold text-cool-gray-text uppercase">Mar 2020 - Dec 2021</span>
+</div>
+<ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed space-y-1">
+<li>Spearheaded the migration from legacy infrastructure to AWS.</li>
+<li>Mentored junior developers and managed agile sprint planning.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="text-sm font-bold text-cool-gray-text dark:text-gray-500 uppercase tracking-[0.2em]">InnoSoft GmbH</h3>
+<span class="text-[10px] font-bold text-cool-gray-text/60 dark:text-gray-500 italic">Jun 2016 - Dec 2017</span>
+</div>
+<div class="flex flex-col gap-4 border-l border-transparent ml-1">
+<div class="pl-6 relative">
+<div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-forest-dark"></div>
+<div class="flex flex-col gap-2">
+<h4 class="text-xl font-bold text-forest-dark dark:text-white">Software Engineer</h4>
+<p class="text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed">
+                                        Development of IoT dashboards and real-time visualization tools for industrial automation systems. Focus on low-latency data streaming and responsive design.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 mt-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-forest-mid">workspace_premium</span>
+<h2 class="text-xl font-bold text-forest-mid dark:text-white tracking-tight">Awards &amp; Recognition</h2>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-lg border border-cool-gray-light dark:border-white/5 bg-cool-gray-light/30 dark:bg-zinc-800/30 flex items-center gap-3">
+<span class="material-symbols-outlined text-forest-mid">verified</span>
+<div>
+<p class="text-xs font-bold dark:text-gray-200 leading-tight">Clean Code Award</p>
+<p class="text-[10px] text-cool-gray-text dark:text-gray-500 uppercase tracking-wider mt-1">Global Tech 2022</p>
+</div>
+</div>
+<div class="p-4 rounded-lg border border-cool-gray-light dark:border-white/5 bg-cool-gray-light/30 dark:bg-zinc-800/30 flex items-center gap-3">
+<span class="material-symbols-outlined text-forest-mid">verified</span>
+<div>
+<p class="text-xs font-bold dark:text-gray-200">Open Source Contributor</p>
+<p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-1">K8s Ecosystem</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="no-print w-full py-10 flex flex-col items-center gap-4 text-cool-gray-text dark:text-gray-500 text-sm">
+<p>© 2024 Alex Rivera — Professional Career Path</p>
+<div class="flex gap-4">
+<button class="p-2 bg-white dark:bg-zinc-800 rounded-full shadow-sm" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-[20px] hidden dark:block text-yellow-500">light_mode</span>
+</button>
+</div>
+</div>
+
+</body></html>

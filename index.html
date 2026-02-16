@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Index</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #edf0ee 0%, #f6f8f6 50%, #ffffff 100%);
+        color: #00493a;
+      }
+      .wrap {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+      .card {
+        width: min(720px, 100%);
+        background: #ffffff;
+        border: 1px solid #d7ded8;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        padding: 28px;
+      }
+      h1 {
+        margin: 0 0 8px 0;
+        font-size: 24px;
+        letter-spacing: 0.2px;
+      }
+      p {
+        margin: 0 0 20px 0;
+        color: #606462;
+        font-size: 14px;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .link-card {
+        border: 1px solid #e1e6e2;
+        border-radius: 12px;
+        padding: 16px;
+        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .link-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        border-color: #007517;
+      }
+      .link-main {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .link-desc-box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+        min-width: 0;
+      }
+      .link-title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .link-desc {
+        font-size: 12px;
+        color: #606462;
+        margin-top: 4px;
+      }
+      .doc-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: #606462;
+      }
+      .doc-row a {
+        color: #007517;
+        font-weight: 600;
+      }
+      .pill {
+        background: #edf0ee;
+        color: #007517;
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid #d7ded8;
+        white-space: nowrap;
+      }
+      footer {
+        margin-top: 18px;
+        font-size: 12px;
+        color: #606462;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <h1>Lebenslauf Übersicht</h1>
+        <p>Wähle die passende Variante zum Anzeigen oder Drucken.</p>
+        <div class="grid">
+          <div class="link-card">
+            <div class="link-desc-box">
+              <div class="link-title">Mit Profilbild</div>
+              <div class="link-desc">Sidebar mit Foto, optimiert für A4 Druck.</div>
+              <div class="doc-row">
+                <span>Docs:</span>
+                <a href="cv_profile/docs/sticher_layout.html">Layout</a>
+              </div>
+            </div>
+            <a class="link-main pill" href="cv_profile/cv-julian-engler.html">cv_profile</a>
+          </div>
+          <div class="link-card">
+            <div class="link-desc-box">
+              <div class="link-title">Ohne Profilbild</div>
+              <div class="link-desc">Klarer, reduzierter Look für A4 Druck.</div>
+
+              <div class="doc-row">
+                <span>Docs:</span>
+                <a href="cv_without/docs/sticher_layout.html">Layout</a>
+              </div>
+            </div>
+            <a class="link-main pill" href="cv_without/cv-julian-engler.html">cv_without</a>
+          </div>
+        </div>
+        <footer>Stand: Februar 2026</footer>
+      </section>
+    </main>
+  </body>
+</html>

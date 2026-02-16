@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html class="light" lang="de"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Julian Engler - Tech Lead / Teamlead Softwareentwicklung</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="assets/style.css" rel="stylesheet" type="text/css" />
+    <script src="assets/tailwind.config.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0c1d10] transition-colors duration-300">
+
+    <!-- Toolbar -->
+    <div class="no-print sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-cool-gray-light dark:border-white/10">
+        <div class="max-w-[1000px] mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex gap-2">
+                <button class="p-2 text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-lg transition-colors" onclick="window.print()">
+                    <span class="material-symbols-outlined">print</span>
+                </button>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="lang-toggle" class="p-2 px-3 text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-lg transition-colors text-xs font-bold" onclick="toggleLang()">EN</button>
+                <button class="p-2 text-cool-gray-text hover:bg-cool-gray-light dark:hover:bg-white/10 rounded-lg transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined text-[20px] hidden dark:block text-yellow-500">light_mode</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page 1 -->
+    <div class="flex justify-center py-10 px-4 print:py-0 print:px-0">
+        <div class="a4-container print-page-1 bg-white dark:bg-zinc-900 w-full max-w-[900px] min-h-[1150px] shadow-2xl flex overflow-hidden rounded-xl print:rounded-none border border-cool-gray-light dark:border-white/5 print:border-none">
+
+            <!-- Sidebar -->
+            <div class="w-[300px] bg-cool-gray-light dark:bg-zinc-800/50 p-8 flex flex-col gap-8 border-r border-cool-gray-light dark:border-white/5 sidebar-print">
+
+                <!-- Profile Photo -->
+                <div class="flex flex-col text-center gap-4 items-stretch">
+                    <div class="w-full aspect-square rounded-lg border-4 border-white dark:border-zinc-700 shadow-md bg-center bg-cover profile-circle-print"
+                        style="background-image: url('./assets/profil_pic.jpg'); background-position: center 20%;">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-forest-dark dark:text-white">Julian Engler</h1>
+                        <p class="text-forest-mid dark:text-primary font-medium text-sm" data-en="Tech Lead / Team Lead Software Engineering">Tech Lead / Teamlead Softwareentwicklung</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">mail</span>
+                        <span class="text-xs truncate">contact+cv@julian-engler.de</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">phone_iphone</span>
+                        <span class="text-xs">0174 / 3417833</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-cool-gray-text dark:text-gray-400">
+                        <span class="material-symbols-outlined text-forest-mid text-[20px]">location_on</span>
+                        <span class="text-xs" data-en="Berlin, Germany">Berlin, Deutschland</span>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Technical Skills">Technische Skills</h3>
+
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-forest-mid text-[18px]">code</span>
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Languages">Sprachen & Frameworks</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">PHP</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Go</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">TypeScript</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">JavaScript</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Laminas</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Symfony</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">SvelteJs</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">VueJs</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">ExtJs</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Shopware</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-forest-mid text-[18px]">database</span>
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Databases">Datenbanken</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">MySQL</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">PostgreSQL</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">IBM DB2</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-forest-mid text-[18px]">terminal</span>
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Tools & Methods">Architektur & Methoden</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pl-6">
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">REST APIs</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Monolith-Migration</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Skalierung</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">Observability</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">TDD</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-white dark:bg-zinc-700 rounded border border-cool-gray-light dark:border-white/5">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schwerpunkte -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Key Areas">Schwerpunkte</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Skalierung und Stabilisierung hochkritischer Systeme</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium" data-en="ERP Systems">Modernisierung monolithischer Architekturen</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Observability, Logging und Incident-Reduktion</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium" data-en="Scaling">API-Design und Integration komplexer Systemlandschaften</span>
+                        <span class="text-[10px] px-2 py-1 bg-primary/10 dark:bg-primary/20 text-forest-dark dark:text-gray-300 rounded font-medium">Fachliche Führung und Entwicklung von Entwicklerteams</span>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Languages">Sprachen</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between">
+                            <span class="text-xs dark:text-gray-300" data-en="German">Deutsch</span>
+                            <span class="text-[11px] text-forest-mid font-medium" data-en="Native">Muttersprache</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-xs dark:text-gray-300" data-en="English">Englisch</span>
+                            <span class="text-[11px] text-forest-mid font-medium" data-en="Fluent">Fließend</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 p-10 flex flex-col gap-10">
+
+                <!-- Header -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-4xl font-black tracking-tight text-forest-dark dark:text-white uppercase">Lebenslauf</p>
+                        <div class="h-1.5 w-20 bg-forest-mid rounded-full"></div>
+                    </div>
+                    <p class="text-sm leading-relaxed text-cool-gray-text dark:text-gray-400 max-w-[580px]"
+                       data-en="Since 2008 I have been developing software with a focus on PHP – from e-commerce full-stack to backend services and ERP development. Since 2023 I work at a comparison portal (flights, checkout) on scalable, stable systems. As an Engineering Team Lead my focus is on technical architecture and project management: I structure requirements, design solutions, make risks visible early and steer implementation so that teams deliver reliably. Clear communication, traceable decisions and sustainable quality are important to me.">
+                        Tech Lead mit über 15 Jahren Erfahrung in der Entwicklung und Skalierung von E-Commerce- und
+                        Backend-Systemen mit Schwerpunkt auf PHP-basierten Plattformen. Expertise in der Modernisierung
+                        gewachsener Architekturen, der Stabilisierung geschäftskritischer Checkout- und Payment-Prozesse
+                        sowie der Einführung von Observability- und Qualitätsmaßnahmen zur nachhaltigen Verbesserung
+                        von Systembetrieb und Delivery.<br />
+                        <br />
+                        Erfahren in der fachlichen und disziplinarischen Führung von Entwicklungsteams, im Aufbau
+                        effizienter Entwicklungsprozesse sowie in der Übersetzung komplexer fachlicher Anforderungen in
+                        robuste, wartbare Systemarchitekturen. Fokus auf verlässliche Lieferung, transparente
+                        Entscheidungsfindung und kontinuierliche Verbesserung von Systemqualität und Teamleistung.
+                    </p>
+                </div>
+
+                <!-- Professional Experience -->
+                <div class="flex flex-col gap-8">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-forest-mid">work</span>
+                        <h2 class="text-xl font-bold text-forest-dark dark:text-white tracking-tight" data-en="Professional Experience">Berufserfahrung</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-8">
+
+                        <!-- CHECK24 Vergleichsportal Flug GmbH -->
+                        <div class="flex flex-col gap-4">
+                            <div class="flex justify-between items-baseline border-b border-cool-gray-light dark:border-white/5 pb-1">
+                                <h3 class="text-sm font-semibold text-cool-gray-text dark:text-gray-500 uppercase tracking-widest">CHECK24 Vergleichsportal Flug GmbH</h3>
+                                <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 italic">11/2022 - 04/2026</span>
+                            </div>
+                            <div class="ml-1 border-l-2 border-cool-gray-light dark:border-zinc-800 flex flex-col gap-8 py-2">
+
+                                <!-- Teamlead -->
+                                <div class="relative pl-6">
+                                    <div class="absolute -left-[5px] top-2 w-2 h-2 bg-forest-dark rounded-full"></div>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex justify-between items-center">
+                                            <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight" data-en="Team Lead Software Engineering">Teamlead Softwareentwicklung</h4>
+                                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">04/2025 - 04/2026</span>
+                                        </div>
+                                        <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                            <li data-en="Technical and disciplinary leadership of a development team (personnel responsibility, coaching, team organization)">
+                                                Führung eines 8-köpfigen Entwicklungsteams inkl. Hiring, Performance Reviews und Entwicklung von Nachwuchskräften
+                                            </li>
+                                            <li data-en="Planning and conceptualization of key initiatives around checkout and ordering processes, overseeing implementation (prioritization, technical decisions, stakeholder alignment, quality assurance)">
+                                                PlanungSkalierung der Checkout- und Payment-Systeme bei gleichzeitig signifikanter Reduktion von Incidents und Deploy-Rollbacks
+                                            </li>
+                                            <li data-en="Projects: B2B interface for checkout process, integration of new VCC system, modernization of PHP stack">
+                                                Einführung von Observability (Dashboards, Alerting, Logging-Strategie) zur nachhaltigen Verbesserung von Betrieb und Fehleranalyse
+                                            </li>
+                                            <li>
+                                                Modernisierung zentraler Systeme (PHP-Upgrade, Payment-Failover, B2B-Buchungslogik) zur Erhöhung von Resilienz, Mandantenfähigkeit und Wartbarkeit
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Stellv. Teamlead -->
+                                <div class="relative pl-6">
+                                    <div class="absolute -left-[5px] top-2 w-2 h-2 bg-cool-gray-text rounded-full opacity-30"></div>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex justify-between items-center">
+                                            <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight" data-en="Deputy Team Lead Software Engineering">Stellv. Teamlead Softwareentwicklung</h4>
+                                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">04/2024 - 03/2025</span>
+                                        </div>
+                                        <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                            <li data-en="Supporting team leadership in project management and personnel matters">
+                                                Unterstützung bei der Führung des Teams inkl. Hiring und Teamentwicklung während der Übergangsphase zur Abteilungsleitung
+                                            </li>
+                                            <li data-en="Stabilization and scaling of core application components with focus on robust processes and quality">
+                                                Einführung der Punkte-Einlösung im Checkout zur Integration eines neuen Kundenbindungsmechanismus
+                                            </li>
+                                            <li data-en="Projects: Points system redemption, stabilization &amp; scaling, integration of new flight source system (pricing &amp; booking)">
+                                                Anbindung direkter Airline-Quellsysteme zusätzlich zu Distributoren zur Erweiterung der Buchungsabdeckung
+                                            </li>
+                                            <li>
+                                                Stabilisierung und Skalierung der Plattform als Grundlage für deutlich gesteigerte Buchungszahlen und reduzierte Incidents
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Senior -->
+                                <div class="relative pl-6">
+                                    <div class="absolute -left-[5px] top-2 w-2 h-2 bg-cool-gray-text rounded-full opacity-30"></div>
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex justify-between items-center">
+                                            <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Senior Software Developer</h4>
+                                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">11/2022 - 03/2024</span>
+                                        </div>
+                                        <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                            <li data-en="Porting/extraction of search from PHP application as standalone Go service for better scalability">
+                                                Migration der Flugsuche in einen skalierbaren Go-Service mit deutlicher Performance-Verbesserung zentraler Filterfunktionen
+                                            </li>
+                                            <li data-en="Implementation of asynchronous checkout for more robust order processing">
+                                                Parallelbetrieb und kontrollierte Ablösung der Altsuche zur Sicherstellung eines unterbrechungsfreien Produktionsbetriebs
+                                            </li>
+                                            <li>
+                                                Einführung geldwerter Gutscheine mit Restguthabenlogik zur Unterstützung komplexer Zahlungsflüsse
+                                            </li>
+                                            <li>
+                                                Übernahme operativer Verantwortung (Deployments, PM-Schnittstelle, Teamkoordination) als Vorbereitung auf die Teamlead-Rolle
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            <div class="relative pl-6 mt-2">
+                                <p class="text-[10px] font-bold text-forest-mid dark:text-primary uppercase tracking-wider mb-2" data-en="Tech Stack">Tech Stack</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Go</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">MySQL</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Redis</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Resque Queue</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">REST APIs</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Docker</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">On-Prem</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Bitbucket Pipelines</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Grafana</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="flex justify-center py-10 px-4 print:py-0 print:px-0 page-break">
+        <div class="a4-container print-page-2 bg-white dark:bg-zinc-900 w-full max-w-[900px] min-h-[1150px] shadow-2xl flex overflow-hidden rounded-xl print:rounded-none border border-cool-gray-light dark:border-white/5 print:border-none">
+
+            <!-- Sidebar Page 2 -->
+            <div class="w-[300px] bg-cool-gray-light dark:bg-zinc-800/50 p-8 flex flex-col gap-8 border-r border-cool-gray-light dark:border-white/5 sidebar-print">
+
+                <!-- Education -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Education">Ausbildung</h3>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Apprenticeship - IT Specialist Application Development">
+                                Ausbildung - Fachinformatiker Anwendungsentwicklung
+                            </p>
+                            <p class="text-[11px] text-cool-gray-text dark:text-gray-400">notebooksbilliger.de AG</p>
+                            <p class="text-[10px] text-forest-mid font-medium italic">08/2008 - 01/2011</p>
+                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400" data-en="Final Grade: 79 Points">Abschlussnote: 79 Punkte</p>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <p class="text-xs font-bold dark:text-gray-300" data-en="Business Informatics Studies (B.Sc., without degree)">Studium Wirtschaftsinformatik (B.Sc., ohne Abschluss)</p>
+                            <p class="text-[11px] text-cool-gray-text dark:text-gray-400">Hochschule Mittweida</p>
+                            <p class="text-[10px] text-forest-mid font-medium italic">09/2006 - 07/2008</p>
+                            <p class="text-[10px] text-cool-gray-text dark:text-gray-400" data-en="3 Semesters, Faculty: Mathematics / Natural Sciences / Computer Science">3 Semester, Fakultät: Mathematik / Naturwissenschaften / Informatik</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qualifications -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-forest-dark dark:text-white/80 border-b border-cool-gray-text/20 pb-1" data-en="Qualifications">Qualifikationen</h3>
+                    <div class="flex flex-col gap-3">
+                        <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
+                            <div>
+                                <p class="text-[11px] font-bold dark:text-gray-200 leading-tight" data-en="Certified Trainer acc. to Trainer Aptitude Regulation (AEVO)">Ausbilder gem. Ausbilder-Eignungsverordnung</p>
+                                <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">IHK Berlin</p>
+                            </div>
+                        </div>
+                        <div class="p-3 rounded-lg border border-white/50 dark:border-white/5 bg-white/50 dark:bg-zinc-800/30 flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
+                            <div>
+                                <p class="text-[11px] font-bold dark:text-gray-200" data-en="Driver's License Class B">Führerschein Klasse B</p>
+                                <p class="text-[10px] text-cool-gray-text dark:text-gray-500 mt-0.5">EU-Standard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links (fixed bottom) -->
+                <div class="mt-auto flex flex-col gap-3">
+                    <div class="border-t border-cool-gray-text/20"></div>
+                    <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/50 dark:bg-zinc-700/50">
+                        <span class="material-symbols-outlined text-[20px] text-forest-mid">link</span>
+                        <a href="https://linkedin.com/in/julian-engler" class="text-xs font-medium dark:text-gray-300">LinkedIn</a>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/50 dark:bg-zinc-700/50">
+                        <span class="material-symbols-outlined text-[20px] text-forest-mid">link</span>
+                        <a href="https://xing.com/profile/Julian_Engler" class="text-xs font-medium dark:text-gray-300">Xing</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Page 2 -->
+            <div class="flex-1 p-10 flex flex-col gap-10">
+
+                <!-- Header Page 2 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-forest-mid">work</span>
+                        <h2 class="text-xl font-bold text-forest-dark dark:text-white tracking-tight" data-en="Professional Experience (continued)">Berufserfahrung (Fortsetzung)</h2>
+                    </div>
+                </div>
+
+                <!-- Continued Experience -->
+                <div class="flex flex-col gap-8">
+
+                    <!-- Foo AG & Co KG -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-baseline border-b border-cool-gray-light dark:border-white/5 pb-1">
+                            <h3 class="text-sm font-semibold text-cool-gray-text dark:text-gray-500 uppercase tracking-widest">Foo AG & Co KG</h3>
+                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 italic">03/2022 - 07/2022</span>
+                        </div>
+                        <div class="ml-1 border-l-2 border-cool-gray-light dark:border-zinc-800 flex flex-col gap-4 py-1">
+                            <div class="relative pl-6">
+                                <div class="absolute -left-[5px] top-2 w-2 h-2 bg-forest-dark rounded-full"></div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between items-center">
+                                        <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Senior Backend Developer</h4>
+                                    </div>
+                                    <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                        <li data-en="Further development of an existing financial services system">
+                                            Erweiterung eines CRM-Systems für Fondsmanager inkl. Integration neuer Anlageoptionen und Portfolio-Darstellungen
+                                        </li>
+                                        <li data-en="Ensuring software quality through unit tests and code reviews">
+                                            Anpassung der PDF-Vertragsgenerierung zur Unterstützung neuer Produkte und automatisierter Dokumentenerstellung
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative pl-6 mt-2">
+                                <p class="text-[10px] font-bold text-forest-mid dark:text-primary uppercase tracking-wider mb-2" data-en="Tech Stack">Tech Stack</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Symfony</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Angular</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">TypeScript</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PostgreSQL</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOWHAT! (c/o Websling GmbH) -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-baseline border-b border-cool-gray-light dark:border-white/5 pb-1">
+                            <h3 class="text-sm font-semibold text-cool-gray-text dark:text-gray-500 uppercase tracking-widest">SOWHAT! (c/o Websling GmbH)</h3>
+                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 italic">06/2016 - 02/2022</span>
+                        </div>
+                        <div class="ml-1 border-l-2 border-cool-gray-light dark:border-zinc-800 flex flex-col gap-8 py-2">
+
+                            <!-- Lead -->
+                            <div class="relative pl-6">
+                                <div class="absolute -left-[5px] top-2 w-2 h-2 bg-forest-dark rounded-full"></div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between items-center">
+                                        <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Lead Backend Development</h4>
+                                        <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-400 uppercase whitespace-nowrap">01/2017 - 02/2022</span>
+                                    </div>
+                                    <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                        <li data-en="Leading a backend team (3 developers)">
+                                            Fachliche Führung eines Backend-Teams und Betreuung von bis zu 18 aktiven Shop-Plattformen für mehrere Kunden
+                                        </li>
+                                        <li data-en="Planning, conceptualization and ensuring code quality within the team">
+                                            Etablierung effizienter Entwicklungsprozesse → jährliche Umsetzung mehrerer individueller Shop-Plattformen mit konstantem Team
+                                        </li>
+                                        <li data-en="Accompanying new shop systems from acquisition through development to go-live">
+                                            Standardisierung auf Shopware-Basis mit Fokus auf Upgradefähigkeit trotz hoher Individualisierung
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Senior -->
+                            <div class="relative pl-6">
+                                <div class="absolute -left-[5px] top-2 w-2 h-2 bg-cool-gray-text rounded-full opacity-30"></div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between items-center">
+                                        <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Senior Backend Developer</h4>
+                                        <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 uppercase whitespace-nowrap">06/2016 - 01/2017</span>
+                                    </div>
+                                    <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                        <li data-en="Conceptualization, development and maintenance of Shopware plugins">
+                                            Entwicklung individualisierter Shopware-Lösungen mit Plugin-Architektur zur Sicherstellung der Updatefähigkeit
+                                        </li>
+                                        <li data-en="Integration of external systems via APIs">
+                                            Technische Beratung und direkter Kundenkontakt zur Umsetzung komplexer Shop- und ERP-Integrationen
+                                        </li>
+                                        <li data-en="Provision and documentation of APIs for external systems">
+                                            Umsetzung eines bestell basierten Systems ohne Zahlungsprozess inkl. ERP-Anbindung für Versandabläufe
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="relative pl-6 mt-2">
+                                <p class="text-[10px] font-bold text-forest-mid dark:text-primary uppercase tracking-wider mb-2" data-en="Tech Stack">Tech Stack</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">MySQL</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">VueJS</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">extJS</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Docker</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Shopware</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- exitB GmbH -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-baseline border-b border-cool-gray-light dark:border-white/5 pb-1">
+                            <h3 class="text-sm font-semibold text-cool-gray-text dark:text-gray-500 uppercase tracking-widest">exitB GmbH</h3>
+                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 italic">05/2014 - 05/2016</span>
+                        </div>
+                        <div class="ml-1 border-l-2 border-cool-gray-light dark:border-zinc-800 flex flex-col gap-4 py-1">
+                            <div class="relative pl-6">
+                                <div class="absolute -left-[5px] top-2 w-2 h-2 bg-forest-dark rounded-full"></div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between items-center">
+                                        <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Software Developer</h4>
+                                    </div>
+                                    <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                        <li data-en="Further development of the exitB ERP system incl. API and plugin development for shop-ERP integration">
+                                            Entwicklung einer webbasierten POS-Lösung zur direkten Übernahme von Verkäufen ins ERP-System
+                                        </li>
+                                        <li data-en="Conceptualization and implementation of web applications: PWA Pick-App and POS system with internal payment methods">
+                                            Digitalisierung der Kommissionierung durch eine Pick-App mit Scan-Integration und Routenführung
+                                        </li>
+                                        <li data-en="Implementation of prepayment clearing with counter-account verification">
+                                            Implementierung von Shop-Connectoren zur Synchronisation von Bestellungen zwischen Shopsystemen und ERP
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative pl-6 mt-2">
+                                <p class="text-[10px] font-bold text-forest-mid dark:text-primary uppercase tracking-wider mb-2" data-en="Tech Stack">Tech Stack</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">C#</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">IBM DB2</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">extJS</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">jQuery</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Vagrant</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Shopware</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Oxid eShop</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- notebooksbilliger.de AG -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-baseline border-b border-cool-gray-light dark:border-white/5 pb-1">
+                            <h3 class="text-sm font-semibold text-cool-gray-text dark:text-gray-500 uppercase tracking-widest">notebooksbilliger.de AG</h3>
+                            <span class="text-[10px] font-bold text-cool-gray-text dark:text-gray-500 italic">01/2011 - 04/2014</span>
+                        </div>
+                        <div class="ml-1 border-l-2 border-cool-gray-light dark:border-zinc-800 flex flex-col gap-4 py-1">
+                            <div class="relative pl-6">
+                                <div class="absolute -left-[5px] top-2 w-2 h-2 bg-forest-dark rounded-full"></div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between items-center">
+                                        <h4 class="text-base font-bold text-forest-dark dark:text-white leading-tight">Web Developer</h4>
+                                    </div>
+                                    <ul class="list-disc list-outside ml-4 text-xs text-cool-gray-text dark:text-gray-400 leading-relaxed flex flex-col gap-1">
+                                        <li data-en="Further development and maintenance of the shop system (frontend &amp; backend)">
+                                            Full-Stack-Entwicklung von Backend- und Frontend-Features in cross-funktionalen
+                                        </li>
+                                        <li data-en="Planning and implementation of customer acquisition/retention projects">
+                                            Implementierung eines Vertragsmoduls für Mobilfunkangebote inkl. Tariflogik und Gerätebundles
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative pl-6 mt-2">
+                                <p class="text-[10px] font-bold text-forest-mid dark:text-primary uppercase tracking-wider mb-2" data-en="Tech Stack">Tech Stack</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">PHP</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">MySQL</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">JavaScript</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">jQuery</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">CSS</span>
+                                    <span class="px-1.5 py-0.5 bg-cool-gray-light dark:bg-zinc-800 text-[9px] text-cool-gray-text dark:text-gray-400 rounded">Vagrant</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="no-print w-full py-8 flex flex-col items-center gap-3 text-cool-gray-text dark:text-gray-500 text-xs">
+        <p data-en="© 2025 Julian Engler — A4 format optimized for print">© 2025 Julian Engler — A4 Format für Druck optimiert</p>
+    </div>
+
+<script>
+function toggleLang() {
+    var html = document.documentElement;
+    var isDE = html.getAttribute('lang') === 'de';
+    var newLang = isDE ? 'en' : 'de';
+    html.setAttribute('lang', newLang);
+    document.getElementById('lang-toggle').textContent = isDE ? 'DE' : 'EN';
+    document.querySelectorAll('[data-en]').forEach(function(el) {
+        if (!el.getAttribute('data-de')) {
+            el.setAttribute('data-de', el.textContent);
+        }
+        el.textContent = el.getAttribute('data-' + newLang);
+    });
+}
+</script>
+</body>
+</html>
