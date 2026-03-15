@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Julian Engler - Cover Letter</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00735c",
+                        "forest-dark": "#00493a",
+                        "neutral-gray": "#606462",
+                        "background-light": "#edf0ee",
+                        "background-dark": "#0f2313",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+
+            html, body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .letter-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                width: 210mm !important;
+                min-height: 297mm !important;
+                max-width: none !important;
+                border: none !important;
+                border-radius: 0 !important;
+            }
+        }
+
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0c1d10] transition-colors duration-300">
+    <div class="no-print sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-background-light dark:border-white/10">
+        <div class="max-w-[1000px] mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex gap-2">
+                <button class="p-2 text-neutral-gray hover:bg-background-light dark:hover:bg-white/10 rounded-lg transition-colors" onclick="window.print()">
+                    <span class="material-symbols-outlined">print</span>
+                </button>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="lang-toggle" class="p-2 px-3 text-neutral-gray hover:bg-background-light dark:hover:bg-white/10 rounded-lg transition-colors text-xs font-bold" onclick="toggleLang()">EN</button>
+                <button class="p-2 text-neutral-gray hover:bg-background-light dark:hover:bg-white/10 rounded-lg transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined text-[20px] hidden dark:block text-yellow-500">light_mode</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto my-10 w-full max-w-[850px] bg-white dark:bg-zinc-900 shadow-2xl min-h-[1100px] flex flex-col letter-container">
+        <div class="flex flex-1">
+            <aside class="w-[300px] bg-background-light dark:bg-zinc-800/50 p-8 flex flex-col gap-8 border-r border-background-light dark:border-white/5">
+                <div class="flex flex-col text-center gap-4 items-stretch mb-8">
+                    <div class="w-full aspect-square rounded-lg border-4 border-white dark:border-zinc-700 shadow-md bg-center bg-cover" style="background-image: url('./assets/profil_pic.jpg'); background-position: center 20%;"></div>
+                    <div>
+                        <h1 class="text-xl font-bold text-forest-dark dark:text-white">Julian Engler</h1>
+                        <p class="text-primary dark:text-primary font-medium text-sm" data-en="Tech Lead / Team Lead Software Development">Tech Lead / Teamlead Softwareentwicklung</p>
+                    </div>
+                </div>
+
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-xs font-bold tracking-widest text-forest-dark dark:text-white/80 border-b border-neutral-gray/20 pb-1" data-en="Contact Information">Kontakt</h2>
+                    <div class="flex flex-col gap-2 text-[13px]">
+                        <div>
+                            <p class="font-bold text-[10px] text-primary" data-en="Email:">E-Mail:</p>
+                            <p class="text-neutral-gray dark:text-gray-300">contact+cv@julian-engler.de</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-[10px] text-primary" data-en="Phone:">Telefon:</p>
+                            <p class="text-neutral-gray dark:text-gray-300">0174 / 3417833</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-[10px] text-primary" data-en="Location:">Standort:</p>
+                            <p class="text-neutral-gray dark:text-gray-300" data-en="Berlin, Germany">Berlin, Deutschland</p>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+
+            <main class="flex-1 p-10 bg-white dark:bg-zinc-900 flex flex-col gap-10">
+                <div class="text-right text-[13px] text-neutral-gray dark:text-gray-300">
+                    <p id="letter-date">Berlin, 11. Maerz 2026</p>
+                </div>
+
+                <div class="text-[13px] leading-relaxed text-neutral-gray dark:text-gray-300">
+                    <p class="font-medium">Test Firma</p>
+                    <p data-en="Human Resources">Personalabteilung</p>
+                    <p>Test Str. 10</p>
+                    <p>10409 Berlin</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-primary" data-en="Application for the position of Tech Lead / Team Lead Software Development">Bewerbung als Senior Full Stack Engineer (m/w/d)</h2>
+                </div>
+
+                <div class="flex flex-col gap-4 text-[13px] leading-relaxed text-neutral-gray dark:text-gray-300 text-justify">
+                    <p data-en="xxx,">Sehr geehrtes Test-Team,</p>
+                    <p data-en="xxx">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </p>
+                    <p data-en="xxx">
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </p>
+                    <p data-en="xxx">
+                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    </p>
+                    <p data-en="XXX">
+                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p data-en="XXX">
+                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-8">
+                    <div>
+                        <p class="text-[13px] text-neutral-gray dark:text-gray-300" data-en="Yours sincerely">Mit freundlichen Grüßen</p>
+                        <p class="mt-2 font-bold text-neutral-gray dark:text-gray-200">Julian Engler</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+    function formatLetterDate(lang) {
+        var now = new Date();
+        var locale = lang === 'en' ? 'en-GB' : 'de-DE';
+        var formattedDate = now.toLocaleDateString(locale, {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+
+        return lang === 'en' ? 'Berlin, ' + formattedDate : 'Berlin, ' + formattedDate;
+    }
+
+    function updateLetterDate() {
+        var html = document.documentElement;
+        var dateEl = document.getElementById('letter-date');
+        if (dateEl) {
+            dateEl.textContent = formatLetterDate(html.getAttribute('lang') || 'de');
+        }
+    }
+
+    function toggleLang() {
+        var html = document.documentElement;
+        var isDE = html.getAttribute('lang') === 'de';
+        var newLang = isDE ? 'en' : 'de';
+        html.setAttribute('lang', newLang);
+        document.getElementById('lang-toggle').textContent = isDE ? 'DE' : 'EN';
+        document.querySelectorAll('[data-en]').forEach(function(el) {
+            if (!el.getAttribute('data-de')) {
+                el.setAttribute('data-de', el.innerHTML);
+            }
+            el.innerHTML = el.getAttribute('data-' + newLang);
+        });
+        updateLetterDate();
+    }
+
+    updateLetterDate();
+    </script>
+</body>
+</html>
